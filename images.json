@@ -6,12 +6,26 @@
     "maker": "Julia Margaret Cameron",
     "credit": "Museum Shop Fund",
     "source": "Saint Louis Art Museum",
-    "description": "Cameron's husband and her maid pose for the Greek myth Vivien and Merlin.",
+    "description": "https://www.slam.org/collection/objects/43966/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "vivien-and-merlin",
-    "_mtime": "2026:05:06 11:02:30+02:00",
-    "_mtime_raw": "1778058150.0"
+    "_mtime": "2026:05:07 11:22:33+02:00",
+    "_mtime_raw": "1778145753.0270789"
+  },
+  {
+    "filename": "sadiepfeifer.jpg",
+    "title": "Sadie Pfeifer - a Cotton Mill Spinner in Lancaster (",
+    "year": "1908",
+    "maker": "Lewis Wickes Hine",
+    "credit": "Acquired through exchange with George Eastman House",
+    "source": "Art Institute Chicago",
+    "description": "https://www.artic.edu/artworks/23336/sadie-pfeifer-a-cotton-mill-spinner-lancaster-south-carolina",
+    "copyright": "Public Domain",
+    "keywords": [],
+    "file": "sadiepfeifer",
+    "_mtime": "2026:05:07 11:22:37+02:00",
+    "_mtime_raw": "1778145757.8532786"
   },
   {
     "filename": "Untitled3.jpg",
@@ -20,12 +34,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "Viewed as a member of the crowd, we see a stund diver ready to stunt that dive.",
+    "description": "https://www.slam.org/collection/objects/60225/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled3",
-    "_mtime": "2026:05:06 11:02:41+02:00",
-    "_mtime_raw": "1778058161.0"
+    "_mtime": "2026:05:07 11:22:34+02:00",
+    "_mtime_raw": "1778145754.3929622"
   },
   {
     "filename": "Untitled2.jpg",
@@ -34,12 +48,12 @@
     "maker": "Unknown",
     "credit": "Gift of Peter J. Cohen in honor of Laura T. Cohen",
     "source": "Saint Louis Art Museum",
-    "description": "Above the bottom of the picture we see a woman lies in front of her chair, smiling in the snow.",
+    "description": "https://www.slam.org/collection/objects/60097/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled2",
-    "_mtime": "2026:05:06 11:02:40+02:00",
-    "_mtime_raw": "1778058160.0"
+    "_mtime": "2026:05:07 11:22:33+02:00",
+    "_mtime_raw": "1778145753.789412"
   },
   {
     "filename": "Untitled5.jpg",
@@ -48,12 +62,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "A child in shallow water feels emotions. That guy is just standing there.",
+    "description": "https://www.slam.org/collection/objects/60255/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled5",
-    "_mtime": "2026:05:06 11:02:41+02:00",
-    "_mtime_raw": "1778058161.0"
+    "_mtime": "2026:05:07 11:22:35+02:00",
+    "_mtime_raw": "1778145755.2309113"
   },
   {
     "filename": "Untitled11.jpg",
@@ -62,12 +76,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "Swimming or laying like this for the composition? Shot from the side of the pool or on something that floats above the water?",
+    "description": "https://www.slam.org/collection/objects/60222/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled11",
-    "_mtime": "2026:05:06 11:02:43+02:00",
-    "_mtime_raw": "1778058163.0"
+    "_mtime": "2026:05:07 11:22:37+02:00",
+    "_mtime_raw": "1778145757.3041372"
   },
   {
     "filename": "Untitled6.jpg",
@@ -76,26 +90,40 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "A child with a gun pointed at the shooter of this picture. A building fills this composition beautifully.",
+    "description": "https://www.slam.org/collection/objects/62703/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled6",
-    "_mtime": "2026:05:06 11:02:41+02:00",
-    "_mtime_raw": "1778058161.0"
+    "_mtime": "2026:05:07 11:22:35+02:00",
+    "_mtime_raw": "1778145755.5231454"
+  },
+  {
+    "filename": "destitutepeapickers1.jpg",
+    "title": "Destitute pea pickers in California",
+    "year": "1936",
+    "maker": "Dorothea Lange",
+    "credit": "Library of Congress",
+    "source": "Library of Congress",
+    "description": "https://www.loc.gov/resource/fsa.8b29516/",
+    "copyright": "Public Domain",
+    "keywords": [],
+    "file": "destitutepeapickers1",
+    "_mtime": "2026:05:07 11:22:33+02:00",
+    "_mtime_raw": "1778145753.9333255"
   },
   {
     "filename": "Untitled10.jpg",
     "title": "Untitled - ice scene",
     "year": "1936",
-    "maker": "Unknown",
+    "maker": "J.R. Sabiers",
     "credit": "Gift of John R. and Teenuh M. Foster / Saint Louis Art Museum",
     "source": "Saint Louis Art Museum",
-    "description": "Crazy shit in this one, snow, cables, smoke, very atmospheric.",
+    "description": "https://www.slam.org/collection/objects/60245/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled10",
-    "_mtime": "2026:05:06 11:02:43+02:00",
-    "_mtime_raw": "1778058163.0"
+    "_mtime": "2026:05:07 11:22:37+02:00",
+    "_mtime_raw": "1778145757.229273"
   },
   {
     "filename": "Untitled1.jpg",
@@ -104,12 +132,12 @@
     "maker": "Unknown",
     "credit": "Gift of Peter J. Cohen in honor of Laura T. Cohen",
     "source": "Saint Louis Art Museum",
-    "description": "An Unknown woman swings through the air, forever frozen because gravity does not matter in the static world of photography.",
+    "description": "https://www.slam.org/collection/objects/60051/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled1",
-    "_mtime": "2026:05:06 11:02:39+02:00",
-    "_mtime_raw": "1778058159.0"
+    "_mtime": "2026:05:07 11:22:33+02:00",
+    "_mtime_raw": "1778145753.2737744"
   },
   {
     "filename": "Untitled8.jpg",
@@ -118,12 +146,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "This boy is looking through the window, wearing a headthing on his head.",
+    "description": "https://www.slam.org/collection/objects/62662/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled8",
-    "_mtime": "2026:05:06 11:02:42+02:00",
-    "_mtime_raw": "1778058162.0"
+    "_mtime": "2026:05:07 11:22:36+02:00",
+    "_mtime_raw": "1778145756.240951"
   },
   {
     "filename": "Untitled9.jpg",
@@ -132,12 +160,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "Early double exposure gives a cool vibe, because the. weather is also cool.",
+    "description": "https://www.slam.org/collection/objects/62746/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled9",
-    "_mtime": "2026:05:06 11:02:42+02:00",
-    "_mtime_raw": "1778058162.0"
+    "_mtime": "2026:05:07 11:22:36+02:00",
+    "_mtime_raw": "1778145756.4506276"
   },
   {
     "filename": "Untitled4.jpg",
@@ -146,12 +174,12 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "A composition of legs and a back, photographed by a third entity.",
+    "description": "https://www.slam.org/collection/objects/60235/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled4",
-    "_mtime": "2026:05:06 11:02:41+02:00",
-    "_mtime_raw": "1778058161.0"
+    "_mtime": "2026:05:07 11:22:34+02:00",
+    "_mtime_raw": "1778145754.6736681"
   },
   {
     "filename": "Untitled7.jpg",
@@ -160,11 +188,47 @@
     "maker": "Unknown",
     "credit": "Gift of John R. and Teenuh M. Foster",
     "source": "Saint Louis Art Museum",
-    "description": "Mirror and woman seen front and back,",
+    "description": "https://www.slam.org/collection/objects/62747/",
     "copyright": "Public Domain",
     "keywords": [],
     "file": "untitled7",
-    "_mtime": "2026:05:06 11:02:42+02:00",
-    "_mtime_raw": "1778058162.0"
+    "_mtime": "2026:05:07 11:22:35+02:00",
+    "_mtime_raw": "1778145755.7354586"
+  },
+  {
+    "filename": "twostandingnude.jpg",
+    "title": "Two Standing Female Nudes",
+    "year": "1950",
+    "maker": "Félix-Jacques-Antoine Moulin",
+    "credit": "The Rubel Collection, Purchase, Anonymous Gift and Lila Acheson Wallace Gift, 1997",
+    "source": "the Met museum",
+    "description": "https://www.metmuseum.org/art/collection/search/282051",
+    "copyright": "Public Domain",
+    "keywords": [],
+    "file": "twostandingnude",
+    "_mtime": "2026:05:07 11:22:37+02:00",
+    "_mtime_raw": "1778145757.8368697"
+  },
+  {
+    "filename": "GSFC_20171208_Archive_e002076~orig.jpg",
+    "title": "Carina Nebula Landscape",
+    "year": "2017",
+    "maker": "Nasa",
+    "credit": "NASA, ESA, and M. Livio and the Hubble 20th Anniversary Team (STScI)",
+    "source": "nasa.gov",
+    "description": "https://images.nasa.gov/details/GSFC_20171208_Archive_e002076",
+    "copyright": "Public Domain",
+    "keywords": [
+      "Goddard Space Flight Center",
+      "Hubble 20 Years",
+      "Hubble Space Telescope",
+      "hubble",
+      "hubble 20th anniversary",
+      "nasa",
+      "space"
+    ],
+    "file": "gsfc-20171208-archive-e002076-orig",
+    "_mtime": "2026:05:07 11:22:35+02:00",
+    "_mtime_raw": "1778145755.081778"
   }
 ]

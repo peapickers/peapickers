@@ -1,0 +1,13 @@
+{
+  "artist_id": "jonas-vervaet",
+  "name": "Jonas Vervaet",
+  "bio": "...",
+  "avatar": "contemporary/avatars/jonas.jpg",
+  "socials": {
+    "instagram": "@jonasvervaet",
+    "website": "https://..."
+  },
+  "works": [
+    { "filename": "...", "title": "...", ... }
+  ]
+}

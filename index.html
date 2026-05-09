@@ -109,12 +109,31 @@
       color: var(--text-muted);
     }
 
-    .actions {
+    /* ── image grid placeholder ── */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      margin: 24px 0 32px;
+    }
+    .image-grid .img-placeholder {
+      aspect-ratio: 3 / 4;
+      background: var(--bg-alt);
+      border: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* ── CTA buttons ── */
+    .ctas {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
       justify-content: center;
+      margin: 32px 0;
     }
     .btn {
       display: inline-block;
@@ -143,33 +162,6 @@
       background: #222;
     }
 
-    .two-col {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      margin-top: 40px;
-    }
-    .card-link {
-      flex: 1;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid var(--border-light);
-      text-decoration: none;
-      color: var(--text);
-      transition: box-shadow 0.2s;
-    }
-    .card-link:hover {
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-    .card-link h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-    }
-    .card-link p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
     footer {
       text-align: center;
       padding: 32px 24px;
@@ -179,8 +171,17 @@
       letter-spacing: 0.05em;
     }
 
+    .footer-links {
+      margin-top: 16px;
+      font-size: 12px;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      margin: 0 12px;
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .two-col { flex-direction: column; }
       header .brand { font-size: 2.5rem; }
     }
   </style>
@@ -192,49 +193,47 @@
     <p class="sub">Prints and Expositions</p>
   </header>
   <main>
-    <!-- Navigation cards stay at the top -->
-    <div class="two-col">
-      <a href="contemporary.html" class="card-link">
-        <h3>Peapickers</h3>
-        <p>Artworks and Portfolio's</p>
-      </a>
-       <a href="publicdomain.html" class="card-link">
-        <h3>Public Domain Collection</h3>
-         <p>Support Peapickers.VZW</p>
-      </a>
+    <!-- HERO IMAGE GRID (placeholder) -->
+    <div class="image-grid">
+      <div class="img-placeholder">Image 1</div>
+      <div class="img-placeholder">Image 2</div>
+      <div class="img-placeholder">Image 3</div>
     </div>
 
-    <!-- Your personal text begins here -->
-    <p </p>
-	<p class="intro">Welcome to peapickers.vzw; a digital platform for raw, authentic art.</p>
-
-    <p>Peapickers refers to the title ‘Destitute Peapickers’, which is a set of pictures shot by Dorothea Lange in the 1930s. To cite Wikipedia 'it is a derogatory reference to poor, migrant workers during the Great Depression. These people were unskilled, poorly educated workers, employable only in menial jobs. Receiving poor wages for working long hours under dreadful conditions' (Wikipedia).</p>
-
-    <p>While the current welfare state with good working conditions and decent wages differ greatly from the 1930s working conditions of migrants during the Great Depression, it's sentiment holds. For me it means the feeling of being stuck in a continuous series of menial jobs that will never reflect the intellect or creativity of what economic society deems to be the non-skilled. Modern menial jobs are executed by those unable or unwilling to monetize their version of reality.</p>
-
-    <p>I want this platform to be a publicly accessible digital exposition place where unfiltered artworks can exist.</p>
-
-    <p>Your version of raw authenticity must not be kept on a forgotten hard drive or dusty portfolio in some closet.</p>
+    <!-- WELCOME BLOCK -->
+    <p class="intro">Welcome to peapickers.vzw — a digital platform for raw, authentic art.</p>
 
     <blockquote>With raw authentic art I mean soulful and unmanufactured, a true investment of undiluted visceral emotion and intellect.</blockquote>
 
-    <h2>WHAT CAN I OFFER WITH THIS PLATFORM</h2>
-    <ul>
-      <li><strong>VISIBILITY:</strong> Connecting your artworks or portfolio on this platform can make you reach a broader audience. If you feel private about your art, but still want an audience, pseudonymity can be provided.</li>
-       <li><strong>EXPOSITIONS:</strong> Possible if the platform is large or known enough. Holding monthly physical expos in Ghent or Brussels is a final goal.</li>
-      <li><strong>REPRODUCTIONS:</strong> I have the tools needed to reproduce your physical artworks into digital files. Contact me and we can create digital files of your physical work and place them on this platform.</li>
-      <li><strong>HIGH QUALITY PRINTS:</strong> Selling your original artwork or copies of your original work is a choice you can make. With your permission, I can print your digital files on high quality paper as a postcard or poster and send it to the buyer.</li>
-      <li><strong>PUBLIC ARCHIVE:</strong> Small and forever incomplete, but real.
-      <li><strong>QUALITY:</strong> Raw Authenticity is the baselayer that embodies this platform. Please do not provide glossified products that were created for an audience, only provide what you feel to be your reality of raw authenticity.
-      <li><strong>SAFETY:</strong> Your images will always stay your images. They must be licensed, will be undownloadable and will not be scraped by AI while on this platform. These guardrails will be implemented before the first contemporary artist enters the platform.</li>
-    </ul>
+    <!-- MAIN CTAs -->
+    <div class="ctas">
+      <a href="publicdomain.html" class="btn">Browse the Collection</a>
+      <a href="join.html" class="btn primary">Join as an Artist</a>
+    </div>
 
-    <h2>ECONOMIC and FISCAL MODEL</h2>
-    <p>I don't have it all worked out yet. There is not yet a fiscal structure in which I can receive or deposit money. I am considering a vzw (easy to work with).</p>
-    <p>CASH FLOW:</p>
-    <ul>
-      <li>You sold something through the website or during a peapickers exposition? Retail Price - Production cost (if printed by me) - 15%fee = Your Profit. This fee should keep the vzw afloat and sounds predictable and fair for everyone.</li>
-    </ul>
+    <!-- WHAT CAN I OFFER (kept from original, now slightly condensed) -->
+    <section>
+      <h2>WHAT CAN I OFFER WITH THIS PLATFORM</h2>
+      <ul>
+        <li><strong>VISIBILITY:</strong> Connecting your artworks or portfolio on this platform can make you reach a broader audience. Pseudonymity can be provided.</li>
+        <li><strong>EXPOSITIONS:</strong> Monthly physical expos in Ghent or Brussels are a final goal, once the platform has grown.</li>
+        <li><strong>REPRODUCTIONS:</strong> I can digitise your physical works and place them here. Contact me to discuss.</li>
+        <li><strong>HIGH QUALITY PRINTS:</strong> Sell your originals or high‑quality prints. I print on demand and ship directly.</li>
+        <li><strong>PUBLIC ARCHIVE:</strong> Small and forever incomplete, but real.</li>
+        <li><strong>QUALITY:</strong> Raw Authenticity is the baselayer. Please do not provide glossified products made for an audience — show what you feel is your reality.</li>
+        <li><strong>SAFETY:</strong> Your images remain yours. They will be licensed, undownloadable, and protected from AI scraping while on this platform. These guardrails will be in place before the first contemporary artist joins.</li>
+      </ul>
+    </section>
+
+    <!-- ABOUT LINK -->
+    <p style="text-align:center; margin-top:32px;">
+      <a href="about.html" style="color:var(--text-muted); text-decoration:underline;">Read the full story behind the name</a>
+    </p>
+
+    <!-- HOW IT WORKS LINK -->
+    <p style="text-align:center; margin-top:8px;">
+      <a href="how-it-works.html" style="color:var(--text-muted); text-decoration:underline;">How the economic model works</a>
+    </p>
 
     <div class="signature">
       — Jonas, peapickers
@@ -243,7 +242,11 @@
 
   <footer>
     <p>COMPANY INFORMATION SHALL APPEAR HERE.</p>
-    <p style="margin-top:8px;">jonas.vervaet@proton.me - COMPANY'S BANK ACCOUNT </p>
+    <p style="margin-top:8px;">jonas.vervaet@proton.me – BANK ACCOUNT DETAILS</p>
+    <div class="footer-links">
+      <a href="publicdomain.html">Public Domain Collection</a>
+      <a href="contemporary.html">Peapickers (Contemporary)</a>
+    </div>
   </footer>
 </body>
 </html>

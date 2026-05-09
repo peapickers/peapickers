@@ -286,10 +286,40 @@
       .lb-image-wrap { flex:0 0 auto; max-height:50vh; }
       .lb-nav { display:none; }
     }
+        .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid #000;
+      color: #000;
+      background: transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #000;
+      color: #fff;
+    }
+    .btn.primary {
+      background: #000;
+      color: #fff;
+    }
+    .btn.primary:hover {
+      background: #222;
+    }
   </style>
 </head>
 <body>
-
+  <!-- NEW: navigation bar -->
+  <div style="text-align:center; padding:12px; background:var(--bg-alt); border-bottom:1px solid var(--border-light);">
+    <a href="contemporary.html" class="btn" style="margin-right:8px;">Peapickers</a>
+    <a href="publicdomain.html" class="btn primary" style="pointer-events:none; opacity:0.8;">Public Domain</a>
+  </div>
 <header>
   <p class="sub">historical images</p>
   <h1>public domain collection</h1>
@@ -368,7 +398,7 @@ const FILTER_FIELDS = [
 // ═══════════════ LOAD DATABASE ═══════════════
 async function init() {
   try {
-    const res = await fetch('images.json');
+    const res = await fetch('publicdomain.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     allPhotos = await res.json();
     document.getElementById('loading').style.display = 'none';
@@ -383,7 +413,7 @@ async function init() {
     });
   } catch (e) {
     document.getElementById('loading').textContent =
-      'Could not load images.json — make sure the file is in the same folder as this page.';
+      'Could not load publicdomain.json — make sure the file is in the same folder as this page.';
   }
 }
 

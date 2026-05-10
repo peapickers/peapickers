@@ -4,187 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peapickers</title>
+  <link rel="stylesheet" href="css/peapickers.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:          #ffffff;
-      --bg-alt:      #f4f4f4;
-      --text:        #000000;
-      --text-muted:  #555555;
-      --border:      #cccccc;
-      --border-light:#e0e0e0;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      -webkit-font-smoothing: antialiased;
-      letter-spacing: -0.01em;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 24px 40px;
-      border-bottom: 1px solid var(--border-light);
-    }
-    header .brand {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
-    header .tagline {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 12px;
-    }
-    header .sub {
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 48px 24px;
-      flex: 1;
-    }
-
-    section {
-      margin-bottom: 48px;
-    }
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 12px;
-      font-weight: 600;
-      border-bottom: 2px solid #000;
-      padding-bottom: 6px;
-      display: inline-block;
-    }
-    section p,
-    main p {
-      margin-bottom: 14px;
-      color: #222;
-    }
-
-    blockquote {
-      margin: 24px 0;
-      padding: 16px 20px;
-      border-left: 4px solid #000;
-      font-style: italic;
-      color: #444;
-    }
-
-    ul {
-      margin: 0 0 24px 24px;
-      color: #222;
-    }
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    .signature {
-      margin-top: 32px;
-      text-align: right;
-      font-style: italic;
-      color: var(--text-muted);
-    }
-
-    /* ── image grid placeholder ── */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4px;
-      margin: 24px 0 32px;
-    }
-    .image-grid .img-placeholder {
-      aspect-ratio: 3 / 4;
-      background: var(--bg-alt);
-      border: 1px dashed var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-size: 12px;
-    }
-
-    /* ── CTA buttons ── */
-    .ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 32px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid #000;
-      color: #000;
-      background: transparent;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #000;
-      color: #fff;
-    }
-    .btn.primary {
-      background: #000;
-      color: #fff;
-    }
-    .btn.primary:hover {
-      background: #222;
-    }
-
-    footer {
-      text-align: center;
-      padding: 32px 24px;
-      border-top: 1px solid var(--border-light);
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-    }
-
-    .footer-links {
-      margin-top: 16px;
-      font-size: 12px;
-    }
-    .footer-links a {
-      color: var(--text-muted);
-      margin: 0 12px;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      header .brand { font-size: 2.5rem; }
-    }
-  </style>
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin: 24px 0 32px;
+  }
+  .image-grid .img-placeholder {
+    aspect-ratio: 3 / 4;
+    background: var(--bg-alt);
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  .ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 32px 0;
+  }
+  .footer-links {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+  .footer-links a {
+    color: var(--text-muted);
+    margin: 0 12px;
+    text-decoration: underline;
+  }
+  .brand {
+  display: block;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  white-space: normal;
+}
+</style>
 </head>
 <body>
   <header>

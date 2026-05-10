@@ -4,67 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Public Domain Collection · Peapickers</title>
+  <link rel="stylesheet" href="css/peapickers.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:          #ffffff;
-      --bg-alt:      #f4f4f4;
-      --text:        #000000;
-      --text-muted:  #555555;
-      --border:      #cccccc;
-      --border-light:#e0e0e0;
-      --shadow:      0 2px 10px rgba(0,0,0,0.08);
-      --sidebar-w:   260px;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 1.5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 24px 40px;
-      border-bottom: 1px solid var(--border-light);
-    }
-    header .sub {
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-    header h1 {
-      font-size: clamp(2.2rem, 6vw, 3.4rem);
-      font-weight: 600;
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
-    header h1 span {
-      font-weight: 300;
-      color: var(--text-muted);
-    }
-    header .intro {
-      font-size: 14px;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-    }
     .back-link {
       display: inline-block;
       margin-top: 20px;
@@ -185,12 +126,11 @@
     }
     .active-chip span { opacity:0.7; font-size:13px; line-height:1; }
 
-    .gallery-grid {
-  .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
+        .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
 
     .card {
       position:relative; overflow:hidden; cursor:pointer;
@@ -273,8 +213,6 @@
 
     .loading { text-align:center; padding:80px; color:var(--text-muted); font-style:italic; }
 
-    footer { text-align:center; padding:24px; border-top:1px solid var(--border-light); font-size:12px; color:var(--text-muted); }
-
     @media (max-width:768px) {
       .layout { flex-direction:column; }
       aside {
@@ -285,32 +223,6 @@
       .lb-inner { flex-direction:column; max-height:none; }
       .lb-image-wrap { flex:0 0 auto; max-height:50vh; }
       .lb-nav { display:none; }
-    }
-        .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      font-family: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid #000;
-      color: #000;
-      background: transparent;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background: #000;
-      color: #fff;
-    }
-    .btn.primary {
-      background: #000;
-      color: #fff;
-    }
-    .btn.primary:hover {
-      background: #222;
     }
   </style>
 </head>

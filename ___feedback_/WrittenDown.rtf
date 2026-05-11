@@ -1,0 +1,152 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\ftech\fcharset77 Symbol;\f2\fnil\fcharset0 AppleColorEmoji;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa320\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+This is the most important missing piece. You need a dedicated page with:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A clear statement of what "raw authenticity" means in submission terms (your current definition is good but needs to be criteria-based, e.g.: "We look for work that feels unmanufactured\'97no AI-generated images, no stock-photo aesthetics, no purely commercial product shots.")\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+A simple submission form (Name, Email, 3\'965 images, short statement about their practice). Since you're on GitHub Pages (static), use a free service like Formspree, {\field{\*\fldinst{HYPERLINK "https://tally.so/"}}{\fldrslt Tally.so}}, or Google Forms embedded in an iframe.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Explicit note: "Jonas reviews every submission personally. This isn't a jury\'97it's a conversation. If your work doesn't fit, I'll tell you why and suggest where it might." This keeps the threshold human, not algorithmic.\
+\pard\tx566\pardeftab720\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 -VZW oprichten voor payment structure dat is Belgian friendly (Mollie Payment Links)\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf2 \expnd0\expndtw0\kerning0
+Recommendation: Start with Stripe Payment Links. You can generate a QR code for each link, embed the QR image on your product pages, and the user scans 
+\f1 \uc0\u8594 
+\f0  pays 
+\f1 \uc0\u8594 
+\f0  you manually fulfil. This is the fastest path to actually accepting money while you figure out the vzw structure.\
+Delivery specs must be published on every product page and the footer: "Posters are printed on [paper type, weight] at A3 (\'8015) and A2 (\'8020). Shipping within Belgium: \'80X, EU: \'80Y. Orders fulfilled within Z days."\
+2.4 Event page 
+\f2 \uc0\u55357 \u57314 
+\f0 \
+Keep this as a placeholder until you've actually run an event. A single page with: "Peapickers aims to hold monthly physical expositions in Ghent and Brussels. Sign up for our mailing list to be notified." That's enough for now.\
+\
+Section 3 \'96 VISUAL & UX IMPROVEMENTS\
+3.1 Mobile grid: 3 columns like Instagram 
+\f2 \uc0\u55357 \u57313 
+\f0 \
+Your current gallery uses grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) with gap: 0. This works but on mobile it collapses to a single column because of the minmax(220px, \'85) minimum.\
+To get a true 3-column grid on mobile (like Instagram), change the gallery CSS:\
+\pard\pardeftab720\partightenfactor0
+\cf2 css\
+.gallery-grid \{\
+  display: grid;\
+  grid-template-columns: repeat(3, 1fr);\
+  gap: 2px;\
+\}\
+\
+\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf2 Remove the minmax() and hard-code 3 columns. On very small screens this still works because the column width shrinks proportionally. Add a media query only if you want 2 columns on devices under 350px.\
+3.2 Visual elements on landing page 
+\f2 \uc0\u55357 \u57313 
+\f0 \
+As noted above: a hero image grid (3 columns \'d7 2 rows of sample artworks) directly below the tagline and above the two CTA cards. This gives the page a visual anchor and rewards skimmers.\
+3.3 Anti-download / anti-screenshot measures 
+\f2 \uc0\u55357 \u57314 
+\f0 \
+Your friends asked for: "Images on website must not allow downloading or screenshooting images."\
+Reality check: You cannot fully prevent this. Anything displayed in a browser can be screenshotted or pulled from the Network tab. What you can do:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Disable right-click on images with a small JavaScript snippet:\uc0\u8232 javascript\u8232 \u8232 document.addEventListener('contextmenu', (e) => \{\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+  if (e.target.tagName === 'IMG') e.preventDefault();\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\});\uc0\u8232 \u8232 \u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+Overlay a transparent div on top of images in the lightbox to make "Save Image As" harder:\uc0\u8232 css\u8232 \u8232 .lb-image-wrap \{\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	5	}\expnd0\expndtw0\kerning0
+  position: relative;\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\}\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	7	}\expnd0\expndtw0\kerning0
+.lb-image-wrap::after \{\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	8	}\expnd0\expndtw0\kerning0
+  content: '';\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	9	}\expnd0\expndtw0\kerning0
+  position: absolute;\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	10	}\expnd0\expndtw0\kerning0
+  inset: 0;\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	11	}\expnd0\expndtw0\kerning0
+  /* transparent but blocks direct right-click on image */\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	12	}\expnd0\expndtw0\kerning0
+\}\uc0\u8232 \u8232 \u8232 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	13	}\expnd0\expndtw0\kerning0
+Watermark contemporary works (subtle, bottom-corner). Public domain works shouldn't be watermarked\'97they're public domain.\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf2 Communicate this honestly on the site: "We use technical deterrents to protect artist work, but no method is perfect. If you see your work being misused, contact us immediately."\
+3.4 AI-scraping protection 
+\f2 \uc0\u55357 \u57314 
+\f0 \
+Your site is on GitHub Pages (static hosting), so you can't do server-side blocking. What you can do:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+Add a robots.txt to your repository root:\uc0\u8232 text\u8232 \u8232 User-agent: GPTBot\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+Disallow: /\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	4	}\expnd0\expndtw0\kerning0
+User-agent: CCBot\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	5	}\expnd0\expndtw0\kerning0
+Disallow: /\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	6	}\expnd0\expndtw0\kerning0
+\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	7	}\expnd0\expndtw0\kerning0
+User-agent: anthropic-ai\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	8	}\expnd0\expndtw0\kerning0
+Disallow: /\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	9	}\expnd0\expndtw0\kerning0
+\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	10	}\expnd0\expndtw0\kerning0
+User-agent: Google-Extended\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	11	}\expnd0\expndtw0\kerning0
+Disallow: /\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	12	}\expnd0\expndtw0\kerning0
+\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	13	}\expnd0\expndtw0\kerning0
+User-agent: FacebookBot\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	14	}\expnd0\expndtw0\kerning0
+Disallow: /\uc0\u8232 \u8232 \u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa160\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	15	}\expnd0\expndtw0\kerning0
+Add meta tags to every HTML page's <head>:\uc0\u8232 html\u8232 \u8232 <meta name="robots" content="noai, noimageai" />\u8232 \u8232 \u8232 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 {\listtext	16	}\expnd0\expndtw0\kerning0
+Understand the limitation: robots.txt is a voluntary protocol. Reputable crawlers (OpenAI, Google, Common Crawl) respect it; malicious scrapers ignore it. For a platform of your scale, this is sufficient for now. If you grow significantly, consider Cloudflare's free tier which includes bot-fighting tools.\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf2 Section 4 \'96 PROPOSED SITE MAP\
+\pard\pardeftab720\partightenfactor0
+\cf2 text\
+/ (index.html)              Landing page\
+/about/                     The Name \'96 full peapickers story, Dorothea Lange reference\
+/publicdomain/               Public Domain gallery (existing publicdomain.html)\
+/contemporary/               Contemporary artist gallery (existing placeholder)\
+/join/                       Artist onboarding + screening info (NEW)\
+/event/                      Event info page (NEW placeholder)\
+/how-it-works/               Economic model, printing specs, shipping (NEW)\
+/images.json                 Public domain database\
+/contemporary.json            Contemporary artist database (NEW, future)\
+/robots.txt                  AI crawler blocking (NEW)\
+\pard\pardeftab720\sa320\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw0 \
+Also create a button on the landing-age that directs to a page where is clear how I print an image, complete with clear visuals}

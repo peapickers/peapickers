@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoe het werkt · Peapickers</title>
+  <link rel="stylesheet" href="../assets/css/peapickers.css" />
+  <style>
+    /* ----- Pagina-specifieke layout voor de economische modellen ----- */
+    .model-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin: 40px 0;
+      border: 1px solid var(--border-light);
+    }
+    .model-col {
+      padding: 24px 20px;
+    }
+    .model-col:first-child {
+      border-right: 1px solid var(--border-light);
+    }
+    .model-col h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .retail {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 8px 0 4px;
+    }
+    .split {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .flow {
+      margin-bottom: 12px;
+      padding: 8px 0;
+      border-top: 1px dashed var(--border);
+    }
+    .flow:last-child {
+      border-bottom: 1px dashed var(--border);
+    }
+    .flow-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+    }
+    .flow-row + .flow-row {
+      margin-top: 4px;
+    }
+    .flow-row .label {
+      color: var(--text-muted);
+    }
+    .flow-row .value {
+      font-weight: 600;
+    }
+    .flow-row .deduction {
+      font-size: 0.8rem;
+      color: #888;
+      text-align: right;
+      flex-basis: 100%;
+    }
+    .net {
+      margin-top: 16px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: right;
+      border-top: 2px solid var(--text);
+      padding-top: 8px;
+    }
+    .net span {
+      float: left;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    /* Enkele kolom op kleine schermen */
+    @media (max-width: 640px) {
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+      .model-col:first-child {
+        border-right: none;
+      }
+    }
+
+    /* Extra notitie styling */
+    .note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 24px;
+      padding: 12px;
+      border-left: 4px solid #000;
+    }
+    .compare-note {
+      text-align: center;
+      font-weight: 600;
+      margin: 32px 0 16px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Economisch model</h1>
+    <a href="../index.html">← Terug naar Peapickers</a>
+  </header>
+
+  <main>
+    <p>Elke verkoop volgt een heldere, transparante berekening. De cijfers hieronder tonen precies waar het geld naartoe gaat – voor de artiest en voor Peapickers.vzw. Het enige verschil tussen de twee categorieën is het fiscale voordeel van het door de overheid afgegeven <strong>Kunstwerkattest</strong>.</p>
+
+    <!-- A3 FORMAAT -->
+    <h2>A3 Poster</h2>
+    <div class="model-grid">
+      <!-- Zonder attest -->
+      <div class="model-col">
+        <h3>Zonder Kunstwerkattest</h3>
+        <div class="retail">€&thinsp;45<span style="font-size:1rem;">.00</span></div>
+        <div class="split">Artiest 65&thinsp;% &nbsp;·&nbsp; VZW 35&thinsp;%</div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel artiest</span><span class="value">€&thinsp;29.25</span></div>
+          <div class="deduction">– 15% roerende voorheffing (geen kostenaftrek)</div>
+          <div class="deduction">– €&thinsp;4.39</div>
+          <div class="net"><span>Netto artiest</span>€&thinsp;24.86</div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel VZW</span><span class="value">€&thinsp;15.75</span></div>
+          <div class="deduction">– 21% BTW = – €&thinsp;2.73</div>
+          <div class="deduction">– Productiekost = – €&thinsp;2.00</div>
+          <div class="net"><span>Netto VZW</span>€&thinsp;11.02</div>
+        </div>
+      </div>
+
+      <!-- Met attest -->
+      <div class="model-col">
+        <h3>Met Kunstwerkattest</h3>
+        <div class="retail">€&thinsp;43<span style="font-size:1rem;">.00</span></div>
+        <div class="split">Artiest 62.5&thinsp;% &nbsp;·&nbsp; VZW 37.5&thinsp;%</div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel artiest</span><span class="value">€&thinsp;26.88</span></div>
+          <div class="deduction">– 15% roerende voorheffing (op 50% van de inkomsten na kostenaftrek)</div>
+          <div class="deduction">– €&thinsp;2.02</div>
+          <div class="net"><span>Netto artiest</span>€&thinsp;24.86</div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel VZW</span><span class="value">€&thinsp;16.12</span></div>
+          <div class="deduction">– 21% BTW = – €&thinsp;2.79</div>
+          <div class="deduction">– Productiekost = – €&thinsp;2.00</div>
+          <div class="net"><span>Netto VZW</span>€&thinsp;11.33</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="compare-note">✔ De artiest verdient exact hetzelfde netto bedrag. ✔ Peapickers verdient bijna hetzelfde. ✔ De klant betaalt minder met het attest.</p>
+
+    <!-- A2 FORMAAT -->
+    <h2>A2 Poster</h2>
+    <div class="model-grid">
+      <!-- Zonder attest -->
+      <div class="model-col">
+        <h3>Zonder Kunstwerkattest</h3>
+        <div class="retail">€&thinsp;65<span style="font-size:1rem;">.00</span></div>
+        <div class="split">Artiest 65&thinsp;% &nbsp;·&nbsp; VZW 35&thinsp;%</div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel artiest</span><span class="value">€&thinsp;42.25</span></div>
+          <div class="deduction">– 15% roerende voorheffing (geen kostenaftrek)</div>
+          <div class="deduction">– €&thinsp;6.34</div>
+          <div class="net"><span>Netto artiest</span>€&thinsp;35.91</div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel VZW</span><span class="value">€&thinsp;22.75</span></div>
+          <div class="deduction">– 21% BTW = – €&thinsp;3.95</div>
+          <div class="deduction">– Productiekost = – €&thinsp;3.30</div>
+          <div class="net"><span>Netto VZW</span>€&thinsp;15.50</div>
+        </div>
+      </div>
+
+      <!-- Met attest -->
+      <div class="model-col">
+        <h3>Met Kunstwerkattest</h3>
+        <div class="retail">€&thinsp;61<span style="font-size:1rem;">.50</span></div>
+        <div class="split">Artiest 63&thinsp;% &nbsp;·&nbsp; VZW 37&thinsp;%</div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel artiest</span><span class="value">€&thinsp;38.75</span></div>
+          <div class="deduction">– 15% roerende voorheffing (op 50% van de inkomsten na kostenaftrek)</div>
+          <div class="deduction">– €&thinsp;2.91</div>
+          <div class="net"><span>Netto artiest</span>€&thinsp;35.84</div>
+        </div>
+
+        <div class="flow">
+          <div class="flow-row"><span class="label">Bruto aandeel VZW</span><span class="value">€&thinsp;22.75</span></div>
+          <div class="deduction">– 21% BTW = – €&thinsp;3.95</div>
+          <div class="deduction">– Productiekost = – €&thinsp;3.30</div>
+          <div class="net"><span>Netto VZW</span>€&thinsp;15.50</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="compare-note">✔ De artiest verdient hetzelfde. ✔ De VZW verdient hetzelfde. ✔ De klant betaalt nog steeds minder met het attest.</p>
+
+    <div class="note">
+      <strong>Waarom twee verschillende prijzen?</strong><br>
+      Kunstenaars met een Kunstwerkattest kunnen 50% van hun inkomen als forfaitaire kost aftrekken. Dit betekent minder roerende voorheffing, waardoor we de winkelprijs kunnen verlagen zonder dat de artiest er netto op achteruitgaat. Iedereen wint: de artiest krijgt hetzelfde bedrag, de VZW blijft stabiel en kopers betalen minder wanneer het werk wordt gestaafd door een attest.
+    </div>
+
+    <p style="margin-top:40px; text-align:center;">
+      <a href="join.html" class="btn">Word kunstenaar</a>
+      <a href="collection.html#publicdomain" class="btn primary" style="margin-left:8px;">Steun het Publiek Domein</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Peapickers · Een veilige haven voor rauwe, authentieke kunst.</p>
+  </footer>
+</body>
+</html>

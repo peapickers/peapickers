@@ -1,115 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peapickers</title>
-  <link rel="stylesheet" href="css/peapickers.css" />
+  <title>Peapickers · Rauwe, authentieke kunst</title>
+  <link rel="stylesheet" href="assets/css/peapickers.css" />
   <style>
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-    margin: 24px 0 32px;
-  }
-  .image-grid .img-placeholder {
-    aspect-ratio: 3 / 4;
-    background: var(--bg-alt);
-    border: 1px dashed var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    font-size: 12px;
-  }
-  .ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    margin: 32px 0;
-  }
-  .footer-links {
-    margin-top: 16px;
-    font-size: 12px;
-  }
-  .footer-links a {
-    color: var(--text-muted);
-    margin: 0 12px;
-    text-decoration: underline;
-  }
-  .brand {
-  display: block;
-  font-family: 'IBM Plex Sans KR', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  white-space: normal;
-}
-</style>
+    /* ── Beeldvenster ── */
+    .viewer {
+      position: relative;
+      max-width: 900px;
+      margin: 24px auto 32px;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+    }
+    .viewer img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: none;
+    }
+    .viewer img.active {
+      display: block;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border);
+      color: #000;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      user-select: none;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .arrow:hover {
+      background: #fff;
+    }
+    .arrow.left {
+      left: 12px;
+    }
+    .arrow.right {
+      right: 12px;
+    }
+
+    /* ── Knoppen en links ── */
+    .action-links {
+      text-align: center;
+      margin: 24px 0 16px;
+      font-size: 0.95rem;
+    }
+    .action-links a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      margin: 0 18px;
+    }
+    .action-links a:hover {
+      color: #000;
+    }
+
+    .footer-links {
+      margin-top: 16px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="brand">PEAPICKERS</div>
-    <p class="tagline">A Platform for Raw Authenticity.</p>
-    <p class="sub">Prints and Expositions</p>
+    <p class="tagline">Digitale expositieruimte voor alle makers — geen statuut nodig.</p>
   </header>
+
   <main>
-    <!-- HERO IMAGE GRID (placeholder) -->
-    <div class="image-grid">
-      <div class="img-placeholder">Image 1</div>
-      <div class="img-placeholder">Image 2</div>
-      <div class="img-placeholder">Image 3</div>
+    <!-- Collectie knop boven het beeldvenster -->
+    <div style="text-align:center; margin: 24px 0 0;">
+      <a href="pages/collection.html" class="btn">Collectie</a>
     </div>
 
-    <!-- WELCOME BLOCK -->
-    <p class="intro">Welcome to peapickers.vzw — a digital platform for raw, authentic art.</p>
-
-    <blockquote>With raw authentic art I mean soulful and unmanufactured, a true investment of undiluted visceral emotion and intellect.</blockquote>
-
-    <!-- MAIN CTAs -->
-    <div class="ctas">
-      <a href="publicdomain.html" class="btn">Browse the Collection</a>
-      <a href="join.html" class="btn primary">Join as an Artist</a>
+    <!-- Beeldvenster met pijlen -->
+    <div class="viewer" id="viewer">
+      <img src="" alt="Kunstwerk" id="viewer-img" class="active" />
+      <div class="arrow left" id="prev-btn">&#8592;</div>
+      <div class="arrow right" id="next-btn">&#8594;</div>
     </div>
 
-    <!-- WHAT CAN I OFFER (kept from original, now slightly condensed) -->
-    <section>
-      <h2>WHAT CAN I OFFER WITH THIS PLATFORM</h2>
-      <ul>
-        <li><strong>VISIBILITY:</strong> Connecting your artworks or portfolio on this platform can make you reach a broader audience. Pseudonymity can be provided.</li>
-        <li><strong>EXPOSITIONS:</strong> Monthly physical expos in Ghent or Brussels are a final goal, once the platform has grown.</li>
-        <li><strong>REPRODUCTIONS:</strong> I can digitise your physical works and place them here. Contact me to discuss.</li>
-        <li><strong>HIGH QUALITY PRINTS:</strong> Sell your originals or high‑quality prints. I print on demand and ship directly.</li>
-        <li><strong>PUBLIC ARCHIVE:</strong> Small and forever incomplete, but real.</li>
-        <li><strong>QUALITY:</strong> Raw Authenticity is the baselayer. Please do not provide glossified products made for an audience — show what you feel is your reality.</li>
-        <li><strong>SAFETY:</strong> Your images remain yours. They will be licensed, undownloadable, and protected from AI scraping while on this platform. These guardrails will be in place before the first contemporary artist joins.</li>
-      </ul>
-    </section>
+    <p>Peapickers vzw cureert een digitale expositieruimte voor rauwe, authentieke kunst die recht uit de maker komt. Geen volledige archieven, geen massamarkt, geen portfolio — enkel een onverbloemde artistieke uitspatting.</p>
 
-    <!-- ABOUT LINK -->
-    <p style="text-align:center; margin-top:32px;">
-      <a href="about.html" style="color:var(--text-muted); text-decoration:underline;">Read the full story behind the name</a>
-    </p>
+    <blockquote>Gelijkwaardig, eerlijk, los van erkenning. Enkel werk dat er moest zijn — rauw, echt, onmiskenbaar.</blockquote>
 
-    <!-- HOW IT WORKS LINK -->
-    <p style="text-align:center; margin-top:8px;">
-      <a href="how-it-works.html" style="color:var(--text-muted); text-decoration:underline;">How the economic model works</a>
-    </p>
-
-    <div class="signature">
-      — Jonas, peapickers
+    <!-- Drie tekstlinks: De Naam, Prijsberekening, Word kunstenaar -->
+    <div class="action-links">
+      <a href="pages/about.html">De Naam</a>
+      <a href="pages/how-it-works.html">Prijsberekening</a>
+      <a href="pages/join.html">Word kunstenaar</a>
     </div>
   </main>
 
   <footer>
-    <p>COMPANY INFORMATION SHALL APPEAR HERE.</p>
-    <p style="margin-top:8px;">jonas.vervaet@proton.me – BANK ACCOUNT DETAILS</p>
+    <p>Peapickers.vzw — info@peapickersvzw.be</p>
+    <p style="margin-top:4px;">Alle pagina's:</p>
     <div class="footer-links">
-      <a href="publicdomain.html">Public Domain Collection</a>
-      <a href="contemporary.html">Peapickers (Contemporary)</a>
+      <a href="index.html">Home</a>
+      <a href="pages/about.html">Over ons</a>
+      <a href="pages/publicdomain.html">Publiek Domein</a>
+      <a href="pages/contemporary.html">Kunstenaars</a>
+      <a href="pages/join.html">Word kunstenaar</a>
+      <a href="pages/how-it-works.html">Prijsmodel</a>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      const viewerImg = document.getElementById('viewer-img');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+
+      let images = [];
+      let currentIndex = -1;
+
+      async function loadArtistImages() {
+        try {
+          const res = await fetch('artistprofiles.json');
+          if (!res.ok) throw new Error('geen data');
+          const data = await res.json();
+          const filenames = [];
+          data.forEach(artist => {
+            if (artist.works && Array.isArray(artist.works)) {
+              artist.works.forEach(work => {
+                if (work.filename) filenames.push(work.filename);
+              });
+            }
+          });
+          if (filenames.length > 0) {
+            images = filenames;
+          } else {
+            throw new Error('lege lijst');
+          }
+        } catch (e) {
+          // Tijdelijke fallback tot de echte collectie beschikbaar is
+          images = [
+            'assets/placeholder1.jpg',
+            'assets/placeholder2.jpg',
+            'assets/placeholder3.jpg'
+          ];
+        }
+        initViewer();
+      }
+
+      function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      function showImage(index) {
+        if (images.length === 0) return;
+        viewerImg.src = '../' + images[index];
+        viewerImg.alt = 'Kunstwerk';
+      }
+
+      function navigate(direction) {
+        if (images.length === 0) return;
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        showImage(currentIndex);
+      }
+
+      function initViewer() {
+        if (images.length === 0) return;
+        images = shuffleArray([...images]);
+        currentIndex = 0;
+        showImage(currentIndex);
+      }
+
+      prevBtn.addEventListener('click', () => navigate(-1));
+      nextBtn.addEventListener('click', () => navigate(1));
+
+      loadArtistImages();
+    })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word kunstenaar · Peapickers</title>
+  <link rel="stylesheet" href="../assets/css/peapickers.css" />
+  <style>
+    /* ── Tweeluik-grid ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+    @media (max-width: 640px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-card {
+      border: 1px solid var(--border-light);
+      padding: 20px;
+      background: white;
+    }
+    .info-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+      border-bottom: 2px solid #000;
+      padding-bottom: 4px;
+      display: inline-block;
+    }
+    .info-card ul {
+      margin: 12px 0 0 20px;
+      color: #222;
+    }
+    .info-card ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ── Fiscale toelichting ── */
+    .fiscal-note {
+      margin-top: 32px;
+      padding: 20px;
+      border: 1px solid #000;
+      background: var(--bg-alt);
+    }
+    .fiscal-note h4 {
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid #000;
+      color: #000;
+      background: transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Word kunstenaar bij Peapickers</h1>
+    <a href="../index.html">← Terug naar Peapickers</a>
+  </header>
+
+  <main>
+    <p>Peapickers is een gecureerd digitaal archief en een print‑op‑aanvraag webshop voor rauwe, authentieke kunst. We verwelkomen zowel kunstenaars met een <strong>Kunstwerkattest</strong> als makers zonder statuut – iedereen wordt evenwaardig uitbetaald. Of je nu student bent, werkloos, in loondienst of zelfstandig: als jouw werk voortkomt uit een innerlijke noodzaak, ben je hier op de juiste plek.</p>
+
+    <div class="info-grid">
+      <!-- Wat we bieden -->
+      <div class="info-card">
+        <h3>Wat we bieden</h3>
+        <ul>
+          <li><strong>Gratis digitalisatie:</strong> Fysiek werk wordt door ons kleurcorrect gereproduceerd tot een digitaal bestand. Kosteloos.</li>
+          <li><strong>Museumkwaliteit prints:</strong> Jouw beelden worden aangeboden als hoogwaardige A3- en A2-posters.</li>
+          <li><strong>Licentie & bescherming:</strong> We spreken persoonlijk af hoe jouw werk gelicentieerd wordt. Je behoudt alle rechten.</li>
+          <li><strong>Gelijke verloning:</strong> Dankzij onze transparante prijsmodellen houd je als kunstenaar netto hetzelfde over, of je nu een attest hebt of niet. <a href="how-it-works.html">Bekijk de berekeningen</a>.</li>
+          <li><strong>Pseudonimiteit:</strong> Je echte identiteit hoeft niet gekoppeld te zijn aan het getoonde werk. Een veilige haven voor kwetsbare creaties.</li>
+        </ul>
+      </div>
+
+      <!-- Hoe het werkt -->
+      <div class="info-card">
+        <h3>Hoe het werkt</h3>
+        <ul>
+          <li><strong>Persoonlijk contact:</strong> Je stuurt een mail met 3 tot 5 beelden en een korte duiding. We spreken altijd eerst individueel af – geen automatische massa-upload.</li>
+          <li><strong>Curatie:</strong> We selecteren samen de sterkste werken of kleine sequenties die als één geheel verkocht kunnen worden. Een archief dumpen is niet de bedoeling; we bouwen een kwalitatief, samenhangend archief.</li>
+          <li><strong>Jouw kunst, ons verhaal:</strong> Jij vertelt waarom het werk er moest komen. Wij vertalen dat naar een heldere, respectvolle presentatie.</li>
+          <li><strong>Verkoop en uitbetaling:</strong> Zodra een print verkocht wordt, ontvang je jouw aandeel zoals vooraf afgesproken. Alles verloopt via de vzw, met duidelijke jaaroverzichten.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="fiscal-note">
+      <h4>Fiscaal gelijkwaardig, ongeacht je statuut</h4>
+      <p>In België betaal je als kunstenaar 15% roerende voorheffing op royalty-inkomsten. Heb je een <strong>Kunstwerkattest</strong>, dan mag je bovendien 50% forfaitaire kostenaftrek toepassen – waardoor je minder belasting betaalt. Wij hebben onze verdeelsleutels zo gekozen dat je netto hetzelfde overhoudt, of je nu met of zonder attest verkoopt. Het verschil in winkelprijs vangt het fiscale voordeel op, zodat de koper profiteert én jij jouw eerlijke deel krijgt. Lees de volledige doorrekening op de pagina <a href="how-it-works.html">Hoe het werkt</a>.</p>
+    </div>
+
+    <p style="margin-top:40px; text-align:center;">
+      Klaar om jouw werk uit de kast te halen? Stuur een e-mail naar <strong>jonas.vervaet@proton.me</strong> en we plannen een afspraak – volledig vrijblijvend.
+    </p>
+    <p style="text-align:center;">
+      <a href="mailto:jonas.vervaet@proton.me" class="btn">Contact opnemen</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>Peapickers · Een veilige haven voor rauwe, authentieke kunst.</p>
+  </footer>
+</body>
+</html>
